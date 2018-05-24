@@ -1,0 +1,111 @@
+/* ///////////////// GLOBALS ///////////////// */
+
+*
+	box-sizing border-box
+
+html, body
+	margin 0
+	width 100%
+	height 100%
+	overflow-x hidden
+
+/* //////////////// TYPOGRAPHY /////////////// */
+
+body
+	color #233144
+	font-family: 'Quicksand', sans-serif
+h1, h2, h3, h4, h5
+	font-family 'Nunito Sans', sans-serif
+
+/* ////////////// INPUT RANGE /////////////////// */
+
+thumb_color = #857E7B
+track_color = #8BBF9F
+
+input[type=range] {
+	-webkit-appearance: none;
+	width: 100%;
+	background: transparent;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track 
+	width: 100%;
+	height: 22.3px;
+	cursor: pointer;
+	background: track_color;
+	border-radius: 25px;
+
+input[type=range]::-webkit-slider-thumb 
+	height: 60px;
+	width: 60px;
+	background: thumb_color;
+	cursor: pointer;
+	-webkit-appearance: none;
+	border-radius: 60px;
+	margin-top: -18.85px;
+
+input[type=range]::-moz-range-track 
+	width: 100%;
+	height: 22.3px;
+	cursor: pointer;
+	background: track_color;
+	border-radius: 25px;
+
+input[type=range]::-moz-range-thumb 
+	height: 60px;
+	width: 60px;
+	border-radius: 60px;
+	background: thumb_color;
+	cursor: pointer;
+
+input[type=range]::-ms-track 
+	width: 100%;
+	height: 22.3px;
+	cursor: pointer;
+	background: transparent;
+	border-color: transparent;
+	color: transparent;
+
+input[type=range]::-ms-fill-lower 
+	background: track_color;
+	border-radius: 50px;
+
+input[type=range]::-ms-fill-upper 
+	background: track_color;
+	border-radius: 50px;
+
+input[type=range]::-ms-thumb 
+	height: 60px;
+	width: 60px;
+	border-radius: 60px;
+	background: thumb_color;
+	cursor: pointer;
+	height: 22.3px;
+
+/* //////////////// BUTTONS ///////////////// */
+
+.btn
+	cursor pointer
+	display inline-block
+	text-align center
+	:hover
+		opacity 0.7
+
+/* /////////////// UTILS //////////////////// */
+
+.text-center
+	text-align center
+
+.fullscreen
+	position absolute
+	top 0
+	bottom 0
+	left 0
+	right 0
+.valign >*
+	display inline-block
+	vertical-align middle
+.vscroll
+	overflow-y auto

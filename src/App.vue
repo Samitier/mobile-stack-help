@@ -1,26 +1,25 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+	<main class="fullscreen vscroll" :style="cssStyle">
+		<router-view/>
+	</main>
 </template>
 
-<style lang="stylus">
-#app
-  font-family 'Avenir', Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
+<script lang="ts">
+	import { Component, Vue } from "vue-property-decorator"
+	import { Getter, Mutation } from "vuex-class"
 
-#nav
-  padding 30px
-  a
-    font-weight bold
-    color #2c3e50
-    &.router-link-exact-active
-      color #42b983
+	@Component({})
+	export default class App extends Vue {
+
+		@Getter color: string
+
+		selectedAnswerIdx: number = 0
+
+		get cssStyle() {
+			return { backgroundColor: this.color }
+		}
+	}
+</script>
+<style lang="stylus">
+	@import "./styles"
 </style>
