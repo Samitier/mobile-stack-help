@@ -13,7 +13,8 @@
 			</div>
 			<div>{{ selectedAnswer.title }}</div>
 		</div>
-		<input 
+		<input
+			name="answerRange"
 			v-model="selectedAnswerIdx"
 			type="range"
 			min="0"
