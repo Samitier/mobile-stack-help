@@ -5,7 +5,8 @@ export interface Quizz {
 
 export interface Question {
 	title: string,
-	answers: Answer[]
+	answers: Answer[],
+	singleIcon: boolean
 }
 
 export interface Answer {
@@ -16,5 +17,6 @@ export interface Answer {
 
 export interface Result {
 	title: string,
-	description: string
+	description: string,
+	image: string
 }
