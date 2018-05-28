@@ -5,14 +5,18 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "heroku-postbuild": "vue-cli-service build",
+    "start": "node server.js"
   },
   "dependencies": {
+    "compression": "1.7.2",
+    "express": "4.16.2",
+    "heroku-ssl-redirect": "0.0.4",
     "register-service-worker": "^1.0.0",
     "vue": "^2.5.16",
     "vue-class-component": "^6.0.0",
     "vue-property-decorator": "^6.0.0",
-    "vue-router": "^3.0.1",
     "vuex": "^3.0.1",
     "vuex-class": "^0.3.1"
   },
@@ -24,6 +28,10 @@
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "vue-template-compiler": "^2.5.16"
+  },
+  "engines": {
+    "node": "8.7.0",
+    "npm": "5.4.2"
   },
   "browserslist": [
     "> 1%",
