@@ -12,11 +12,12 @@ export interface Question {
 export interface Answer {
 	title: string,
 	image: string,
-	result: number,
+	points: number
 }
 
 export interface Result {
 	title: string,
 	description: string,
-	image: string
+	image: string,
+	totalPoints: number
 }

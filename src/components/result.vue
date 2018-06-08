@@ -1,7 +1,7 @@
 <template>
 	<section class="result text-center fade-zoom">
 		<div class="icon-container">
-			<img :src="'/img/' + result.image"
+			<img :src="'/img/' + result.image">
 		</div>
 		<h1 class="result-title">{{ result.title }}</h1>
 		<div class="result-subtitle">{{ result.description }}</div>
@@ -39,4 +39,9 @@
 		border-radius 50%
 		background white
 		margin 1em auto
+		>img
+			width 80%
+			position relative
+			top 50%
+			transform translateY(-50%)
 </style>

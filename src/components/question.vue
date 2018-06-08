@@ -73,7 +73,7 @@ export default class QuestionComponent extends Vue {
 	onSendAnswer() {
 		this.onNewAnswer({
 			question: this.question,
-			answer: this.question.answers[this.selectedAnswerIdx].result
+			answer: this.question.answers[this.selectedAnswerIdx]
 		})
 	}
 }

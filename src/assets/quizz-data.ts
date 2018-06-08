@@ -1,58 +1,59 @@
 // tslint:disable:object-literal-key-quotes
+// tslint:disable:max-line-length
 import { Quizz } from "../models/quizz.model"
 
 export const quizzData: Quizz = {
 	"questions": [
 		{
-			"title": "¿De qué presupuesto disponéis?",
+			"title": "¿Cómo es el presupuesto para el proyecto?",
 			"singleIcon": false,
 			"answers": [
 				{
 					"title": "El mínimo posible",
 					"image": "euro-sign",
-					"result": 0
+					"points": 2
 				},
 				{
-					"title": "Bajo",
+					"title": "Ajustado",
 					"image": "euro-sign",
-					"result": 1
+					"points": 3
 				},
 				{
-					"title": "Medio",
+					"title": "Ampliable si el proyecto es interesante",
 					"image": "euro-sign",
-					"result": 2
+					"points": 6
 				},
 				{
 					"title": "Alto",
 					"image": "euro-sign",
-					"result": 3
+					"points": 10
 				}
 			]
 		},
 		{
-			"title": "¿De cuanto tiempo de desarrollo disponéis?",
+			"title": "Time-to-market: ¿Cuánto tiempo disponéis para el desarrollo?",
 			"singleIcon": false,
 			"answers": [
 				{
-					"title": "Más de seis meses",
+					"title": "Queremos un prototipo lo antes posible",
 					"image": "exclamation",
-					"result": 3
-				},
-				{
-					"title": "Seis meses",
-					"image": "exclamation",
-					"result": 2
+					"points": 0
 				},
 				{
 					"title": "Un par de meses",
 					"image": "exclamation",
-					"result": 1
+					"points": 0
 				},
 				{
-					"title": "Queremos un prototipo lo antes posible",
+					"title": "Entre tres y cuatro meses",
 					"image": "exclamation",
-					"result": 0
+					"points": 0
 				},
+				{
+					"title": "Seis meses o más para escalar",
+					"image": "exclamation",
+					"points": 0
+				}
 			]
 		},
 		{
@@ -62,23 +63,23 @@ export const quizzData: Quizz = {
 				{
 					"title": "Diariamente",
 					"image": "stopwatch",
-					"result": 2
+					"points": 4
 				},
 				{
 					"title": "Una vez por semana",
 					"image": "clock",
-					"result": 1
+					"points": 2
 				},
 				{
 					"title": "Consultas esporádicas",
 					"image": "calendar-alt",
-					"result": 1
+					"points": 2
 				},
 				{
-					"title": "Sólo en situaciones concretas",
+					"title": "Una vez o sólo en situaciones concretas",
 					"image": "calendar",
-					"result": 0
-				},
+					"points": 0
+				}
 			]
 		},
 		{
@@ -86,51 +87,51 @@ export const quizzData: Quizz = {
 			"singleIcon": true,
 			"answers": [
 				{
-					"title": "Sólo desde moviles IOS y Android",
+					"title": "Sólo desde móviles iOS y Android",
 					"image": "mobile",
-					"result": 2
+					"points": 6
 				},
 				{
-					"title": "Tal vez en algún momento del desarrollo",
+					"title": "Ahora no, quizás en el futuro",
 					"image": "tablet-alt",
-					"result": 1
+					"points": 3
 				},
 				{
-					"title": "Si, pero quiero que tengan funcionalidades distintas",
+					"title": "Sí, pero quiero que tengan funcionalidades distintas",
 					"image": "laptop",
-					"result": 1
+					"points": 2
 				},
 				{
-					"title": "Si y quiero que sean iguales",
+					"title": "Sí y quiero que sean iguales",
 					"image": "desktop",
-					"result": 0
-				},
+					"points": 0
+				}
 			]
 		},
 		{
-			"title": "¿Tu app va a usar funciones avanzadas del teléfono?",
+			"title": "¿Tu app va a usar funciones propias del teléfono?",
 			"singleIcon": true,
 			"answers": [
 				{
 					"title": "No, sólo quiero mostrar y recibir información",
 					"image": "bars",
-					"result": 0
+					"points": 4
 				},
 				{
 					"title": "Quiero geolocalización y/o usar la cámara",
 					"image": "camera",
-					"result": 1
+					"points": 10
 				},
 				{
-					"title": "Quiero poder leer/enviar SMS y leer los contactos",
+					"title": "Y además poder leer/enviar SMS y leer los contactos",
 					"image": "envelope",
-					"result": 2
+					"points": 15
 				},
 				{
-					"title": "Usará bluetooth y se comunicará con otras apps",
+					"title": "Y también bluetooth y se comunicará con otras apps",
 					"image": "signal",
-					"result": 3
-				},
+					"points": 20
+				}
 			]
 		},
 		{
@@ -138,48 +139,52 @@ export const quizzData: Quizz = {
 			"singleIcon": false,
 			"answers": [
 				{
-					"title": "Quiero una app lo más parecida a una app normal",
+					"title": "Convencional",
 					"image": "paint-brush",
-					"result": 2
+					"points": 8
 				},
 				{
 					"title": "Quiero que sea bonita, pero sin sacrificar usabilidad",
 					"image": "paint-brush",
-					"result": 1
+					"points": 4
 				},
 				{
 					"title": "Quiero algo distinto a las demás apps",
 					"image": "paint-brush",
-					"result": 0
+					"points": 2
 				},
 				{
 					"title": "Quiero un diseño 100% customizable e innovador",
 					"image": "paint-brush",
-					"result": 0
-				},
+					"points": 0
+				}
 			]
-		},
+		}
 	],
 	"results": [
 		{
 			"title": "Progressive Web App",
-			"description": "",
-			"image": "pwa.png"
+			"description": "Quieres una app rápida de desarrollar, y fácil de encontrar para los clientes. No te importa sacrificar un poco de rendimiento, ni posibles problemas de escalabilidad en un futuro.",
+			"image": "pwa.png",
+			"totalPoints": 15
 		},
 		{
 			"title": "Framework de JS",
-			"description": "Lorem ipsum dolor sit amet",
-			"image": ""
+			"description": "Quieres una app que tenga un aspecto nativo y que sea rápida de desarrollar. Tienes previsto crear una versión web en un futuro.",
+			"image": "reactnative.png",
+			"totalPoints": 30
 		},
 		{
-			"title": "Solución nativa híbrida",
-			"description": "",
-			"image": ""
+			"title": "Solución nativa multiplataforma",
+			"description": "Quieres una app con un rendimiento casi nativo y un coste de mantenimiento bajo. Necesitas acceder a funciones propias del teléfono.",
+			"image": "xamarin.png",
+			"totalPoints": 45
 		},
 		{
 			"title": "Solución nativa",
-			"description": "",
-			"image": ""
-		},
+			"description": "Quieres una app 100% nativa y que sea ligera, aunque el coste de mantenimiento sea alto.",
+			"image": "native.png",
+			"totalPoints": 99
+		}
 	]
 }

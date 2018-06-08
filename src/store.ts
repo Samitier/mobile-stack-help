@@ -1,7 +1,7 @@
 import Vue from "vue"
 import Vuex from "vuex"
 import { quizzData } from "@/assets/quizz-data.ts"
-import { Quizz, Question } from "./models/quizz.model"
+import { Quizz, Question, Answer } from "./models/quizz.model"
 
 Vue.use(Vuex)
 
@@ -9,14 +9,11 @@ export default new Vuex.Store({
 	state: {
 		quizz: quizzData,
 		colors: ["#d3ece1", "#ffdfba", "#ffffba", "#baffc9", "#cddfda"],
-		answers: [] as number []
+		points: 0
 	},
 	mutations: {
-		setAnswer(state, answer: number) {
-			if (!state.answers.length) {
-				state.answers = new Array(state.quizz.questions[0].answers.length).fill(0)
-			}
-			state.answers[answer]++
+		setAnswer(state, answer: Answer) {
+			state.points += answer.points
 		},
 		removeQuestion(state, question: Question) {
 			const i = state.quizz.questions.indexOf(question)
@@ -41,8 +38,7 @@ export default new Vuex.Store({
 			return state.quizz.questions[idx]
 		},
 		result(state) {
-			const selectedAnswer = state.answers.indexOf(Math.max(...state.answers))
-			return state.quizz.results[selectedAnswer]
+			return state.quizz.results.find(r => state.points <= r.totalPoints)
 		},
 		color: state => state.colors[0]
 	}
