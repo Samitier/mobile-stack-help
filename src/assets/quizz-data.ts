@@ -183,7 +183,7 @@ export const quizzData: Quizz = {
 		{
 			"title": "Solución nativa",
 			"description": "Quieres una app 100% nativa y que sea ligera, aunque el coste de mantenimiento sea alto.",
-			"image": "native.png",
+			"image": "nativeplatform.png",
 			"totalPoints": 99
 		}
 	]
